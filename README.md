@@ -1,6 +1,6 @@
 # PartialHumanBrain_preprocessing
 This is for preprocessing EPI data with human brains with partial coverage
-This preprocessing pipeline was used to preprocess the visual entrainment data, which has <50% brain coverage.
+This preprocessing pipeline was developed by Nan XU and was used to preprocess the visual entrainment data, which has <50% brain coverage.
 
 ## I. Pre-requisites: MATLAB (including SPM12), AFNI, FSL
 Please have the above pre-installed on your computing server (Linux system). In the default parameter settings, the spm12 folder was saved under the path ./PB_preprocessing/partialbrain_preprocessing_pipeline2020_nx/
