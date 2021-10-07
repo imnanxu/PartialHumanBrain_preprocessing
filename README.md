@@ -6,6 +6,7 @@ This preprocessing pipeline was used to preprocess the visual entrainment data, 
 ## Files
 ### The pipeline (Matlab scripts and functions): ./PB_preprocessing/partialbrain_preprocessing_pipeline2020_nx/
 1. The main script of preprocessing is ./PB_preprocessing/partialbrain_preprocessing_pipeline2020_nx/MainScript_server.m
+
 (*You may need to change the predefined parameters and the folder path ("dirhead") to fit your data*)
 
 2. A post FC and histogram analysis is also included: ./PB_preprocessing/partialbrain_preprocessing_pipeline2020_nx/PostAnalysis_FCMap.m
