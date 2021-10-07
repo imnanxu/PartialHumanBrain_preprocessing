@@ -1,0 +1,15 @@
+subj 	ref		comments
+1	f01		f02 up
+2	rest	
+3	rest/f01	f03 down
+4	rest	
+5	rest	
+6	rest		others up
+7	rest		others down
+10	rest		others down
+13	rest		others up
+15	rest		others up
+16	rest		05, 06 down
+17	rest		all shifted left (including the rest), 05, 06 up
+19	rest		others slightly tilted but almost the same
+20	f04		rest is close to 04 but slightly tilted towards left
