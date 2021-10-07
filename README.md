@@ -6,10 +6,12 @@ This preprocessing pipeline was used to preprocess the visual entrainment data, 
 Please have the above pre-installed on your computing server (Linux system). In the default parameter settings, the spm12 folder was saved under the path ./PB_preprocessing/partialbrain_preprocessing_pipeline2020_nx/
 
 ## II. Pipeline functions and scripts: ./PB_preprocessing/partialbrain_preprocessing_pipeline2020_nx/
-### 1. The main script is ./PB_preprocessing/partialbrain_preprocessing_pipeline2020_nx/MainScript_server.m
+### 1. The main scrip:
+./PB_preprocessing/partialbrain_preprocessing_pipeline2020_nx/MainScript_server.m
 *You may need to change the predefined parameters and the folder path ("dirhead") to fit your data*
 
-###  2. A post FC and histogram analysis is also included: ./PB_preprocessing/partialbrain_preprocessing_pipeline2020_nx/PostAnalysis_FCMap.m
+###  2. A post FC and histogram analysis is also included:
+./PB_preprocessing/partialbrain_preprocessing_pipeline2020_nx/PostAnalysis_FCMap.m
 
 ## III. Sample data: ./PB_preprocessing/Data/
 Two sample datasets were included. 
