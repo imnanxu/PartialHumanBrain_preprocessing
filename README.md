@@ -1,5 +1,5 @@
 # PartialHumanBrain_preprocessing
-This is for preprocessing EPI human brain data with partial coverage
+This is for preprocessing EPI human brain data with partial coverage.
 This preprocessing pipeline was developed by Nan Xu and was used to preprocess the visual entrainment data, which has <50% brain coverage.
 
 ## I. Pre-requisites: MATLAB (including SPM12), AFNI, FSL
