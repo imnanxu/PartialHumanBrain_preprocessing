@@ -1,5 +1,5 @@
 # This pipeline is for preproessing EPI human brains data with partial coverage. 
-# Developed by Nan Xu Nov, 2020
+# Developed by Nan Xu in 2020
 clear all
 close all
 clc
