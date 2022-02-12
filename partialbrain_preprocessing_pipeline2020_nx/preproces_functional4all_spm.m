@@ -108,11 +108,11 @@ spm_jobman('run', matlabbatch_nor);
 fprintf('Done\n')
 filename='wAllScans_unwarp_reorient';
 
-fprintf([time,sub, ': ','FSL-applying t1->atlas warp to SPM coregistered EPI... '])     
-cmd = [fsldir,'applywarp --in=r' filename_app '.nii --ref=' diratlas ...
-    '/mni_brain.nii.gz --warp=t1_to_mni_warp.nii.gz '...
-     ' --out=fsl_r' filename_app '_to_mni.nii.gz'];
-system(cmd); fprintf('Done\n')
+%fprintf([time,sub, ': ','FSL-applying t1->atlas warp to SPM coregistered EPI... '])     
+%cmd = [fsldir,'applywarp --in=r' filename_app '.nii --ref=' diratlas ...
+%    '/mni_brain.nii.gz --warp=t1_to_mni_warp.nii.gz '...
+%     ' --out=fsl_r' filename_app '_to_mni.nii.gz'];
+%system(cmd); fprintf('Done\n')
 % _______________________________________________________________________ %
 
 %% _______________________Spatial smoothing _____________________________ %
