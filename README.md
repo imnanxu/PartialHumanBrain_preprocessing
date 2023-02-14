@@ -7,10 +7,10 @@ Please have the above pre-installed on your computing server (Linux system). Ple
 https://en.wikibooks.org/wiki/SPM/Installation_on_Windows#Preamble.
 
 ## II. Pipeline functions and scripts: ./partialbrain_preprocessing_pipeline2020_nx/
-### 1. The main scrip:MainScript_server.m 
+### 1. The main scrip to run: MainScript_server.m 
 Please modified the necessary parameters in the Parameter Settings section to fit your data
 
-###  2. A post FC and histogram analysis is also included: PostAnalysis_FCMap.m
+###  2. A post FC and histogram analysis also included: PostAnalysis_FCMap.m
 
 ## III. Sample data: ./Data/
 Two sample datasets were included. 
@@ -21,8 +21,8 @@ Two sample datasets were included.
 
 ### 2. Two parcellation atlasses are included: 
    a. Schaefer-Yeo 400 parcels (https://github.com/ThomasYeoLab/CBIG/tree/master/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal)
-    
-    b. Brainnetome atlas  (https://atlas.brainnetome.org/)
+   
+   b. Brainnetome atlas  (https://atlas.brainnetome.org/)
 
 
 
