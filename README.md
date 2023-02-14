@@ -12,8 +12,14 @@ Please modified the necessary parameters in the Parameter Settings section to fi
 
 ###  2. A post FC and histogram analysis also included: PostAnalysis_FCMap.m
 
-## III. Sample data: ./Data/
-Two sample datasets were included. 
+## III. Data files: ./Data/
+Functional MRI datasets for two subjects were included: ./subject001/ and ./subject002/. Each subject folder will have the following input and output files.
+### 1. Input files: 
+   2 EPI scans: rest.nii, f01.nii (or f03.nii)
+   1 T1 scan: t1.nii   
+### 2. Final output data:
+   
+The final seed-based extracted EPI timeseries are saved in 
 
 ## VI. Resources files: ./resources/
 ### 1. The field map files of the sample data are included in ./fmap/
