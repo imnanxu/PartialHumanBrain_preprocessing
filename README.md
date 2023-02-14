@@ -12,7 +12,7 @@ https://en.wikibooks.org/wiki/SPM/Installation_on_Windows#Preamble.
 ### 1. The main scrip to run: MainScript_server.m 
 Please modified the necessary parameters in the Parameter Settings section to fit your data
 
-%###  2. A post FC and histogram analysis also included: PostAnalysis_FCMap.m
+<!-- ###  2. A post FC and histogram analysis also included: PostAnalysis_FCMap.m -->
 
 ## III. Data files: ./Data/
 Functional MRI datasets for two subjects were provided: ./subject001/ and ./subject002/. Each subject folder will have the following input and output files.
@@ -25,8 +25,7 @@ Sample data includes the following files:
 You can name your own EPI filenames and specifiy that in the Paramter Settion section in MainScript_sever.m. However, please always rename your anatomical scan to t1.nii.
 ### 2. Final outputs:
 
-   %   The final seed-based extracted EPI timeseries are saved in 
-
+   <!-- The final seed-based extracted EPI timeseries are saved in -->
 ## VI. Resources files: ./resources/
 ### 1. The field map files of the sample data are included in ./fmap/
 These files are for distortion corrections. Please replace the these files with the correct ones from your imaging sessions.
