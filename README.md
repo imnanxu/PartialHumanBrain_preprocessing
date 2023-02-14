@@ -1,7 +1,8 @@
 # PartialHumanBrain_preprocessing
 This preprocessing pipeline was developed by Nan Xu and was used to preprocess EPI human brain data with partial coverage, which has been used in (Xu et al., 2022). EPI scans with <50% brain coverage can be sucessfully preprocessed. This automated pipeline is based around SPM12 (https://www.fil.ion.ucl.ac.uk/spm/software/spm12/), FSL (Jenkinson et al., 2012), and AFNI (Cox, 1996; Cox & Hyde, 1997). Detailed preprocessing procedures were described in (Xu et al., 2022, Section 2.1). In summary, following procedures will be performed. 
 
-First, the anatomical T1 image was spatially normalized to the Montreal Neurological Institute (MNI) atlas. Next, the functional EPI timeseries were concatenated, realigned, and normalized to the MNI atlas. Third, the normalized EPI data were spatially smoothed, and temporally filtered. Fourth, the EPI data were further regressed by the white matter and CSF signals or the global signals (gray matter, white matter, and CSF). Fifth, the concatenated EPI data was split back to each scan. Sixth, the preprocessed EPI timeseries were extracted from the brain parcels and then z-scored. 
+First, the anatomical T1 image is spatially normalized to the Montreal Neurological Institute (MNI) atlas. Next, the functional EPI timeseries are concatenated, realigned, and normalized to the MNI atlas. The motion parameters and brain tissue masks (CSF, white matter and grey matter) are also estimated. Third, the normalized EPI data were spatially smoothed, and temporally filtered. Fourth, the EPI data were further regressed by the white matter and CSF signals or the global signals (gray matter, white matter, and CSF). Fifth, the concatenated EPI data was split back to each scan. Sixth, the preprocessed EPI timeseries were extracted from the brain parcels and then z-scored. 
+
 
 ## I. Pre-requisites: MATLAB (including SPM12), AFNI, FSL
 Please have the above pre-installed on your computing server (Linux system). Please install spm12 under the Matlab home folder (under 'userpath' in Matlab) following
@@ -15,7 +16,7 @@ Please modified the necessary parameters in the Parameter Settings section to fi
 
 ## III. Data files: ./Data/
 Functional MRI datasets for two subjects were provided: ./subject001/ and ./subject002/. Each subject folder will have the following input and output files.
-### 1. Required nput files: 1 or more EPI scans, and 1 T1 scan. 
+### 1. Required input files: 1 or more EPI scans, and 1 T1 scan. 
 Sample data includes the following files:
       2 EPI scans: rest.nii, f01.nii (or f03.nii)
       1 T1 scan: t1.nii   
