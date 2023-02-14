@@ -18,14 +18,11 @@ Two sample datasets were included.
 
 ## VI. Resources files: ./resources/
 1. The field map files of the sample data are included in ./fmap/
-
-(* These files are for distortion corrections. Please replace the these files with the correct ones from your imaging sessions.*)
+  (* These files are for distortion corrections. Please replace the these files with the correct ones from your imaging sessions.*)
 
 2. Two parcellation atlasses are included: 
-
-a. Schaefer-Yeo 400 parcels (https://github.com/ThomasYeoLab/CBIG/tree/master/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal)
-
-b. Brainnetome atlas  (https://atlas.brainnetome.org/)
+  a. Schaefer-Yeo 400 parcels (https://github.com/ThomasYeoLab/CBIG/tree/master/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal)
+  b. Brainnetome atlas  (https://atlas.brainnetome.org/)
 
 
 
