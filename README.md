@@ -53,7 +53,7 @@ You can name your own EPI filenames and specifiy that in the Paramter Settion se
 |                          | spatial smoothing |  swAllScans_unwarp_reorient |
 |                          | termporal filtering |  swAllScans_unwarp_reorient_fil |
 |                          | termporal filtering |  swAllScans_unwarp_reorient_fil |
-|                          | split back to individual scans | $scan$ \_reg_sm_fil |
+|                          | split back to individual scans | `scan` \_reg_sm_fil |
 
 
 
