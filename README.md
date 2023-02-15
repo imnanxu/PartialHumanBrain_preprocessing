@@ -8,13 +8,24 @@ First, the anatomical T1 image is spatially normalized to the Montreal Neurologi
 Please have the above pre-installed on your computing server (Linux system). Please install spm12 under the Matlab home folder (under 'userpath' in Matlab) following
 https://en.wikibooks.org/wiki/SPM/Installation_on_Windows#Preamble.
 
-## II. Pipeline functions and scripts: ./partialbrain_preprocessing_pipeline2020_nx/
+## II. Resources files: ./resources/
+### 1. The field map files of the sample data are included in ./fmap/
+These files are for distortion corrections. Please replace the these files with the correct ones from your imaging sessions.
+
+### 2. Two parcellation atlasses are included: 
+   a. Schaefer-Yeo 400 parcels (https://github.com/ThomasYeoLab/CBIG/tree/master/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal)
+   
+   b. Brainnetome atlas  (https://atlas.brainnetome.org/)
+
+
+
+## III. Pipeline functions and scripts: ./partialbrain_preprocessing_pipeline2020_nx/
 ### 1. The main scrip to run: MainScript_server.m 
 Please modified the necessary parameters in the Parameter Settings section to fit your data
 
 <!-- ###  2. A post FC and histogram analysis also included: PostAnalysis_FCMap.m -->
 
-## III. Data files: ./Data/
+## IV. Data files and preprocessing steps: ./Data/
 Functional MRI datasets for two subjects were provided: ./subject001/ and ./subject002/. Each subject folder will have the following input and output files.
 ### 1. Required input files: >=1 EPI scans & 1 anatomical scan. 
 Sample data includes the following files:
@@ -26,17 +37,8 @@ You can name your own EPI filenames and specifiy that in the Paramter Settion se
 ### 2. Final outputs:
 
    <!-- The final seed-based extracted EPI timeseries are saved in -->
-## VI. Resources files: ./resources/
-### 1. The field map files of the sample data are included in ./fmap/
-These files are for distortion corrections. Please replace the these files with the correct ones from your imaging sessions.
-
-### 2. Two parcellation atlasses are included: 
-   a. Schaefer-Yeo 400 parcels (https://github.com/ThomasYeoLab/CBIG/tree/master/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal)
    
-   b. Brainnetome atlas  (https://atlas.brainnetome.org/)
-
-
-
+   
 ## References:
 Cox, R. W. (1996). AFNI: software for analysis and visualization of functional magnetic resonance neuroimages. Computers and Biomedical research, 29(3), 162-173.
 
