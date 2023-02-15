@@ -35,14 +35,27 @@ Sample data includes the following files:
 
 You can name your own EPI filenames and specifiy that in the Paramter Settion section in MainScript_sever.m. However, please always rename your anatomical scan to t1.nii.
 ### 2. Preprocessing steps & Outputs:
-| Data under preprocessing | Precessing step |    Key output    |
+| Data under preprocessing | Precessing step |    Key output files   |
 |--------------------------|-----------------|--------------|
 | Anatomical scan          | reorientation   | t1_reorient  |
 |                          | bias correction | t1_reorient_bc |
 |                          | brain extraction | t1_reorient_bet |
 |                          | tissue segmentation |c1t1_reorient_bc (grey matter), c2t1_reorient_bc (white matter), c3t1_reorient_bc (csf)|
 |                          | mask generation |  WM_mask_70perc (white matter mask), CSF_mask_70perc (white matter mask), GlobalSig_mask (whole brain mask) |
-|                          | mask normalization (in MNI space) |  wWM_mask_70perc (white matter mask), wCSF_mask_70perc (white matter mask), wGlobalSig_mask (whole brain mask) |
+|                          | mask registration (to MNI space) |  wWM_mask_70perc (white matter mask), wCSF_mask_70perc (white matter mask), wGlobalSig_mask (whole brain mask) |
+| Functional EPI scans     | scans concatenation/subject | AllScans  |
+|                          | fieldmap correction   | AllScans_unwarp  |
+|                          | reorientation   | AllScans_unwarp_reorient  |
+
+|                          | motion estimation | AllScans_unwarp_reorient |
+|                          | bias correction on the 1st volume | AllScans_unwarp_reorient_bc |
+|                          | brain extraction on the 1st volume | AllScans_unwarp_reorient_bc_bet |
+|                          | functional registration to all volumnes | wAllScans_unwarp_reorient |
+|                          | spatial smoothing |  swAllScans_unwarp_reorient |
+|                          | termporal filtering |  swAllScans_unwarp_reorient_fil |
+|                          | termporal filtering |  swAllScans_unwarp_reorient_fil |
+|                          | split back to individual scans | $scan$ \_reg_sm_fil |
+
 
 
    
