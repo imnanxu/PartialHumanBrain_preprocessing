@@ -22,11 +22,8 @@ Two parcellation atlases are included:
 You could choose either atlas in MainScript_sever.m (described below) for the timeseries extraction. You could also add your own parcellation atlas files here and specify the atlas filename in MainScript_sever.m.
 
 ## III. Pipeline functions and scripts: ./partialbrain_preprocessing_pipeline2020_nx/
-### 1. Main script: MainScript_server.m 
+### Main script: MainScript_server.m 
 Please modified the necessary parameters in the Parameter Settings section for your data.
-
-###  2. Post analysis script: PostAnalysis_FCMap.m
-This post analysis script is for computing the network organized functional connectivity (FC) matrix and FC histograms.
 
 ## IV. Data files: ./Data/
 Functional MRI datasets for two subjects were provided: ./subject001/ and ./subject002/. Each subject folder will have the following input and output files.
