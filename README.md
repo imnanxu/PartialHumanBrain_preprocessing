@@ -55,9 +55,9 @@ You can name your own EPI filenames and specifiy that in the Paramter Settion se
 |                          | termporal filtering |  swAllScans_unwarp_reorient_fil |
 |                          | split back to individual scans | `scan` \_reg_sm_fil |
 |                          | signal regression | `scan` \_reg_sm_fil_gsr (preprocessed 4D EPI data with global signal regression); `scan` \_reg_sm_fil_wmcsf (preprocessed 4D EPI data with WM&CSF regression) |
-|                          | parcellation and z-scoring | `scan` \_reg_sm_fil_gsr_on_parcel_`atlas name`.mat or/and `scan` \_reg_sm_fil_wmcsf_on_parcel_`atlas name`.mat. In each .mat file,  3 variables are saved: ts_parcel (a 2D matrix of extracted timeseries from selected atlas), ts_zscore (a 2D matrix of z-scored timeseries from selected atlas), voxel_per_roi (1st column include the ground truth number of voxels in each parcel <from the atlas file>, and the 2nd column includes the experical number of voxels in each parcel <from the EPI scan>)|
+|                          | parcellation and z-scoring | `scan` \_reg_sm_fil_gsr_on_parcel_`atlas name`.mat or/and `scan` \_reg_sm_fil_wmcsf_on_parcel_`atlas name`.mat. |
 
-
+In the final preprocessing step, 3 variables are saved in each .mat file: ts_parcel (a 2D matrix of extracted timeseries from selected atlas), ts_zscore (a 2D matrix of z-scored timeseries from selected atlas), and voxel_per_roi (a 2-column matrix including the number of voxels per parcel). Note that the EPI scan might be only partially covered, some parcels from the selected atlas might not be fully covered by the EPI data. For the voxel_per_roi variable, the 1st column includes the ground truth number of voxels in each parcel (calculated from the atlas file), and the 2nd column includes the experical number of voxels in each parcel (calculated from the EPI scan).
 
 
 
