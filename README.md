@@ -9,19 +9,22 @@ Please have the above pre-installed on your computing server (Linux system). Ple
 https://en.wikibooks.org/wiki/SPM/Installation_on_Windows#Preamble.
 
 ## II. Resources files: ./resources/
-### 1. The field map files of the sample data are included in ./fmap/
-These files are for distortion corrections. Please replace the these files with the correct ones from your imaging sessions.
+### 1. ./resources/fmap/: field map files of the sample data
+These files are for distortion corrections. Please replace the these files with the ones from your imaging sessions.
 
-### 2. Two parcellation atlasses are included: 
+### 2. Parcellation atlas files:
+Two parcellation atlases are included:
+
    a. Schaefer-Yeo 400 parcels (https://github.com/ThomasYeoLab/CBIG/tree/master/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal)
    
    b. Brainnetome atlas  (https://atlas.brainnetome.org/)
 
+You could add your own parcellation atlas files here, and specify the atlas filenames in the MainScript_sever.m described below. 
 
 
 ## III. Pipeline functions and scripts: ./partialbrain_preprocessing_pipeline2020_nx/
 ### 1. Main script: MainScript_server.m 
-Please modified the necessary parameters in the Parameter Settings section to fit your data
+Please modified the necessary parameters in the Parameter Settings section for your data.
 
 <!-- ###  2. A post FC and histogram analysis also included: PostAnalysis_FCMap.m -->
 
@@ -59,10 +62,6 @@ You can name your own EPI filenames and specifiy that in the Paramter Settion se
 
 In the final preprocessing step, 3 variables are saved in each .mat file: ts_parcel (a 2D matrix of extracted timeseries from selected atlas), ts_zscore (a 2D matrix of z-scored timeseries from selected atlas), and voxel_per_roi (a 2-column matrix including the number of voxels per parcel). Note that the EPI scan might be only partially covered, some parcels from the selected atlas might not be fully covered by the EPI data. For the voxel_per_roi variable, the 1st column includes the ground truth number of voxels in each parcel (calculated from the atlas file), and the 2nd column includes the experical number of voxels in each parcel (calculated from the EPI scan).
 
-
-
-   
-   
 ## References:
 Cox, R. W. (1996). AFNI: software for analysis and visualization of functional magnetic resonance neuroimages. Computers and Biomedical research, 29(3), 162-173.
 
