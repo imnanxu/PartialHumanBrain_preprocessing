@@ -40,7 +40,14 @@ You can name your own EPI filenames and specifiy that in the Paramter Settion se
 | Anatomical scan          | reorientation   | t1_reorient  |
 |^                         | bias correction | t1_reorient_bc |
 |^                         | brain extraction | t1_reorient_bet |
-   <!-- The final seed-based extracted EPI timeseries are saved in -->
+
+| Cell1| Cell2 | Cell3 |
+|------|-------|-------|
+| merge right ||       |
+| merge|       |       |
+| below|^      |^      |
+| merge both  || value1|
+|^            || value2|
    
    
 ## References:
