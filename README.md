@@ -20,7 +20,7 @@ These files are for distortion corrections. Please replace the these files with 
 
 
 ## III. Pipeline functions and scripts: ./partialbrain_preprocessing_pipeline2020_nx/
-### 1. Main scrip: MainScript_server.m 
+### 1. Main script: MainScript_server.m 
 Please modified the necessary parameters in the Parameter Settings section to fit your data
 
 <!-- ###  2. A post FC and histogram analysis also included: PostAnalysis_FCMap.m -->
