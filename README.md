@@ -35,13 +35,15 @@ Sample data includes the following files:
 
 You can name your own EPI filenames and specifiy that in the Paramter Settion section in MainScript_sever.m. However, please always rename your anatomical scan to t1.nii.
 ### 2. Preprocessing steps & Outputs:
-| Data under preprocessing | Precessing step |    Output    |
+| Data under preprocessing | Precessing step |    Key output    |
 |--------------------------|-----------------|--------------|
 | Anatomical scan          | reorientation   | t1_reorient  |
-|                         | bias correction | t1_reorient_bc |
-|                         | brain extraction | t1_reorient_bet |
-|                         | tissue segmentation |[c1t1_reorient_bc.nii, ..., c5t1_reorient_bc.nii] are grey matter, white matter, csf, soft tissue, and bone.|
-|                         | tissue segmentation | c1t1_reorient_bc.nii (grey matter), c2t1_reorient_bc.nii (white matter), c3t1_reorient_bc.nii (csf) |
+|                          | bias correction | t1_reorient_bc |
+|                          | brain extraction | t1_reorient_bet |
+|                          | tissue segmentation |c1t1_reorient_bc (grey matter), c2t1_reorient_bc (white matter), c3t1_reorient_bc (csf)|
+|                          | mask generation |  WM_mask_70perc (white matter mask), CSF_mask_70perc (white matter mask), GlobalSig_mask (whole brain mask) |
+|                          | mask normalization (in MNI space) |  wWM_mask_70perc (white matter mask), wCSF_mask_70perc (white matter mask), wGlobalSig_mask (whole brain mask) |
+
 
    
    
