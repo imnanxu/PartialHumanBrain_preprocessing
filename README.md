@@ -38,8 +38,10 @@ You can name your own EPI filenames and specifiy that in the Paramter Settion se
 | Data under preprocessing | Precessing step |    Output    |
 |--------------------------|-----------------|--------------|
 | Anatomical scan          | reorientation   | t1_reorient  |
-| ^^                         | bias correction | t1_reorient_bc |
-| ^^                        | brain extraction | t1_reorient_bet |
+|                         | bias correction | t1_reorient_bc |
+|                         | brain extraction | t1_reorient_bet |
+|                         | tissue segmentation |[c1t1_reorient_bc.nii, c2t1_reorient_bc.nii,..., c3t1_reorient_bc.nii] are grey matter, white matter, csf, soft tissue, and bone.|
+|                         | tissue segmentation | c1t1_reorient_bc.nii (grey matter), c2t1_reorient_bc.nii (white matter), c3t1_reorient_bc.nii (csf) |
 
    
    
