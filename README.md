@@ -9,7 +9,7 @@ Please have the above pre-installed on your computing server (Linux system). Ple
 https://en.wikibooks.org/wiki/SPM/Installation_on_Windows#Preamble.
 
 ## II. Resources files: ./resources/
-### 1. ./resources/fmap/: field map files of the sample data
+### 1. Field map files of the sample data: ./resources/fmap/
 These files are for distortion corrections. Please replace the these files with the ones from your imaging sessions.
 
 ### 2. Parcellation atlas files:
@@ -25,7 +25,8 @@ You could choose either atlas in MainScript_sever.m (described below) for the ti
 ### 1. Main script: MainScript_server.m 
 Please modified the necessary parameters in the Parameter Settings section for your data.
 
-<!-- ###  2. A post FC and histogram analysis also included: PostAnalysis_FCMap.m -->
+###  2. Post analysis script: PostAnalysis_FCMap.m
+This post analysis script is for computing the network organized functional connectivity (FC) matrix and FC histograms.
 
 ## IV. Data files: ./Data/
 Functional MRI datasets for two subjects were provided: ./subject001/ and ./subject002/. Each subject folder will have the following input and output files.
