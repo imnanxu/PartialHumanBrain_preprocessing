@@ -35,7 +35,7 @@ Sample data includes the following files:
 
 You can name your own EPI filenames and specifiy that in the Paramter Settion section in MainScript_sever.m. However, please always rename your anatomical scan to t1.nii.
 ### 2. Preprocessing steps & Outputs:
-| Data under preprocessing | Precessing step |    Key output files   |
+| Data under preprocessing | Precessing steps |    Key output files   |
 |--------------------------|-----------------|--------------|
 | Anatomical scan          | reorientation   | t1_reorient  |
 |                          | bias correction | t1_reorient_bc |
@@ -46,7 +46,6 @@ You can name your own EPI filenames and specifiy that in the Paramter Settion se
 | Functional EPI scans     | scans concatenation/subject | AllScans  |
 |                          | fieldmap correction   | AllScans_unwarp  |
 |                          | reorientation   | AllScans_unwarp_reorient  |
-
 |                          | motion estimation | AllScans_unwarp_reorient |
 |                          | bias correction on the 1st volume | AllScans_unwarp_reorient_bc |
 |                          | brain extraction on the 1st volume | AllScans_unwarp_reorient_bc_bet |
