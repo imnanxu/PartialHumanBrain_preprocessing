@@ -19,8 +19,7 @@ Two parcellation atlases are included:
    
    b. Brainnetome atlas  (https://atlas.brainnetome.org/)
 
-You could add your own parcellation atlas files here, and specify the atlas filenames in the MainScript_sever.m described below. 
-
+You could choose either atlas in MainScript_sever.m (described below) for the timeseries extraction. You could also add your own parcellation atlas files here and specify the atlas filename in MainScript_sever.m.
 
 ## III. Pipeline functions and scripts: ./partialbrain_preprocessing_pipeline2020_nx/
 ### 1. Main script: MainScript_server.m 
