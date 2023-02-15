@@ -25,7 +25,7 @@ Please modified the necessary parameters in the Parameter Settings section to fi
 
 <!-- ###  2. A post FC and histogram analysis also included: PostAnalysis_FCMap.m -->
 
-## IV. Data files and preprocessing steps: ./Data/
+## IV. Data files: ./Data/
 Functional MRI datasets for two subjects were provided: ./subject001/ and ./subject002/. Each subject folder will have the following input and output files.
 ### 1. Required input files: >=1 EPI scans & 1 anatomical scan. 
 Sample data includes the following files:
@@ -34,8 +34,12 @@ Sample data includes the following files:
       1 anatomical scan: t1.nii 
 
 You can name your own EPI filenames and specifiy that in the Paramter Settion section in MainScript_sever.m. However, please always rename your anatomical scan to t1.nii.
-### 2. Final outputs:
-
+### 2. Preprocessing steps & Outputs:
+| Data under preprocessing | Precessing step |    Output    |
+|--------------------------|-----------------|--------------|
+| Anatomical scan          | reorientation   | t1_reorient  |
+|                          | bias correction | t1_reorient_bc |
+|                          | brain extraction | t1_reorient_bet |
    <!-- The final seed-based extracted EPI timeseries are saved in -->
    
    
