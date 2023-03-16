@@ -70,19 +70,18 @@ parfor subj_ct=1:length(subjs)
     file_merge=epi_merge(fsldir, subjectdir, scans_subj);  %file_merge='AllScans';
      
 %     %starts functional brain preprocessing  
-    filename=preproces_functional4all_spm(subjectdir, file_merge, fsldir, diratlas, bet_epi, sm, fil);   
+    filename=preproces_functional4all_spm(subjectdir, file_merge, fsldir, diratlas, bet_epi, sm);   
 end
 
 
-for subj_ct=1:length(subjs)
+filename='swAllScans_unwarp_reorient'; prefix='_reg_sm';
+parfor subj_ct=1:length(subjs)
     
     %iterates through all subjects
 	subjectdir = char(subjs(subj_ct));
-    scans_subj=scans(subj_ct,:); 
-    filename='swAllScans_unwarp_reorient_fil';
+    scans_subj=scans(subj_ct,:);    
    
     %split the merged epi file into individual scans    
-    prefix='_reg_sm_fil';
     epi_split(subjectdir, [filename '.nii'], scans_subj, prefix, fsldir, Ntime); %the splited scan has the filename [scan '_reg_sm_fil.nii.gz']; 
     cd(subjectdir);
 
@@ -90,7 +89,7 @@ for subj_ct=1:length(subjs)
         scan=scans_subj(scan_ct);
         disp(scan)      
         filename=[char(scan) prefix]; 
-        preprocess_functional_sigreg(subjectdir, filename, gsr, wmcsfr);
+        preprocess_functional_filsigreg(subjectdir, filename, fil, gsr, wmcsfr);
 %         filename=['s' filename];
         if gsr==1
             ext='gsr';
