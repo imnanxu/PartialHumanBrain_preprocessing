@@ -52,8 +52,8 @@ You can name your own EPI filenames and specifiy that in the Paramter Settion se
 |                          | functional registration to all volumnes | wAllScans_unwarp_reorient |
 |                          | spatial smoothing |  swAllScans_unwarp_reorient |
 |                          | termporal filtering |  swAllScans_unwarp_reorient_fil |
-|                          | termporal filtering |  swAllScans_unwarp_reorient_fil |
-|                          | split back to individual scans | `scan` \_reg_sm_fil |
+|                          | split back to individual scans | `scan` \_reg_sm |
+|                          | termporal filtering |  `scan` \_reg_sm_fil |
 |                          | signal regression | `scan` \_reg_sm_fil_gsr (preprocessed 4D EPI data with global signal regression); `scan` \_reg_sm_fil_wmcsf (preprocessed 4D EPI data with WM&CSF regression) |
 |                          | parcellation and z-scoring | `scan` \_reg_sm_fil_gsr_on_parcel_`atlas name`.mat or/and `scan` \_reg_sm_fil_wmcsf_on_parcel_`atlas name`.mat. |
 
