@@ -35,7 +35,7 @@ T = datetime('now'); time = whatsthetime(T);
 fprintf([time,sub,'Anatomical bias correction ... '])
 cmd = [fsldir, 'fast -B t1_reorient'];
 system(cmd);
-system('mv t1_reorient_restore.nii.gz t1_reorient_bc.nii.gz'); fprintf('Done\n') 
+copyfile('t1_reorient_restore.nii.gz','t1_reorient_bc.nii.gz'); fprintf('Done\n') 
 % system('mv t1_reorient_restore.nii.gz t1_reorient_bc0.nii.gz');
 % cmd = [fsldir, 'flirt -in t1_reorient_bc0.nii.gz -ref t1_reorient_bc0.nii.gz -applyisoxfm 2.0 -nosearch -out t1_reorient_bc.nii.gz'];
 % system(cmd);

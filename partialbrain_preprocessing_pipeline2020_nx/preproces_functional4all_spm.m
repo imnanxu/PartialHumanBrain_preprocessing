@@ -1,4 +1,4 @@
-function filename=preproces_functional4all_spm(subjectdir, filename, fsldir, diratlas, bet, sm, fil)
+function filename=preproces_functional4all_spm(subjectdir, filename, fsldir, diratlas, bet, sm)
 
 % starts functional brain preprocessing
 % realgin all functional scans 
@@ -74,7 +74,7 @@ T = datetime('now'); time = whatsthetime(T);
 fprintf([time,sub, ': FSL-Functional bias correction on the 1st volume ... '])
 cmd = [fsldir, 'fast -B ' filename '.nii.gz'];
 system(cmd); fprintf('Done\n') 
-system(['mv ' filename '_restore.nii.gz ' filename '_bc.nii.gz']);
+copyfile([filename '_restore.nii.gz'],[filename '_bc.nii.gz'])
 filename_bc=[filename '_bc'];
 %-------------------------------------------------------------------------%
 T = datetime('now'); time = whatsthetime(T);
