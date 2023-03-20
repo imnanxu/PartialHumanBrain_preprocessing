@@ -1,7 +1,9 @@
+
 clear all; close all; clc
 %% Parameter Settings
 %%%% Setup main directory which hosts /Data, /resources/, and /partialbrain_preprocessing_pipeline2020_nx folders
-dirhead='/keilholz-lab/Nan/Preprocessing/PartialHumanBrain_preprocessing-main';
+cd ../
+dirhead=pwd; 
 % %% install spm12 under the Matlab home folder following
 % %% https://en.wikibooks.org/wiki/SPM/Installation_on_Windows#Preamble
 addpath([userpath, '/spm12']);
@@ -26,7 +28,7 @@ atlas_filename=[diratlas '/Schaefer2018parcel_Yeo/Schaefer2018_400Parcels_7Netwo
 %%%% Setup directories of the subjects
 dirdata=dir([dirhead '/Data']);
 n_subj_st=find(strcmp({dirdata.name}, 'subject001')==1);
-n_subj_ed=find(strcmp({dirdata.name}, 'subject002')==1); %please put the largest subj number here
+n_subj_ed=find(strcmp({dirdata.name}, 'subject020')==1); %please put the largest subj number here
 
 %%%% Setup scan filenames for each subject; subjects need to have the same
 %%%% number of scans
@@ -44,25 +46,22 @@ Nsubjs=length(subjs);
 %%%% Adds data path to MATLAB paths
 addpath([dirhead '/partialbrain_preprocessing_pipeline2020_nx/'],...
         [dirhead '/partialbrain_preprocessing_pipeline2020_nx/NIfTItoolbox/'])
-addpath(genpath([dirhead '/partialbrain_preprocessing_pipeline2020_nx/afni_matlab/']));
 diary([dirhead '/MATLAB_log_preprocess_' datestr(now,'mmddyy') '.txt']);
 fsldir='';
 % addpath(diratlas);
 
 %% Parallel Computing for Preprocessing
-delete(gcp('nocreate')); 
-parpool(6,'IdleTimeout', 100000);
-warning off
-addAttachedFiles(gcp,subjs);
+% delete(gcp('nocreate')); 
+% parpool(2,'IdleTimeout', 100000);
+% warning off
 
 Nscans=size(scans,2);    
-parfor subj_ct=1:length(subjs)
-    
+parfor subj_ct=1:length(subjs)    
     %iterates through all subjects
 	subjectdir = char(subjs(subj_ct))
     scans_subj=scans(subj_ct,:);
  
-    %starts anatomical brain preprocessing
+%     %starts anatomical brain preprocessing
     preprocess_anatomical_prep(fsldir, subjectdir, bet_ant)
     preprocess_anatomical_maskcreation(fsldir, subjectdir, diratlas);
    
@@ -73,24 +72,24 @@ parfor subj_ct=1:length(subjs)
     filename=preproces_functional4all_spm(subjectdir, file_merge, fsldir, diratlas, bet_epi, sm);   
 end
 
-
-filename='swAllScans_unwarp_reorient'; prefix='_reg_sm';
-parfor subj_ct=1:length(subjs)
+for subj_ct=1:length(subjs)
     
     %iterates through all subjects
-	subjectdir = char(subjs(subj_ct));
+	subjectdir = char(subjs(subj_ct)); disp(subjectdir);
     scans_subj=scans(subj_ct,:);    
+
+    filename='wAllScans_unwarp_reorient'; prefix='_reg_sm';
    
     %split the merged epi file into individual scans    
     epi_split(subjectdir, [filename '.nii'], scans_subj, prefix, fsldir, Ntime); %the splited scan has the filename [scan '_reg_sm_fil.nii.gz']; 
     cd(subjectdir);
 
-    for scan_ct=1:Nscans
+    parfor scan_ct=1:Nscans
         scan=scans_subj(scan_ct);
         disp(scan)      
         filename=[char(scan) prefix]; 
-        preprocess_functional_filsigreg(subjectdir, filename, fil, gsr, wmcsfr);
-%         filename=['s' filename];
+        filename=preprocess_functional_filsigreg(subjectdir, filename, fil, gsr, wmcsfr);
+
         if gsr==1
             ext='gsr';
             filename1=[filename '_' ext];
