@@ -78,7 +78,7 @@ for subj_ct=1:length(subjs)
 	subjectdir = char(subjs(subj_ct)); disp(subjectdir);
     scans_subj=scans(subj_ct,:);    
 
-    filename='wAllScans_unwarp_reorient'; prefix='_reg_sm';
+    filename='swAllScans_unwarp_reorient'; prefix='_reg_sm';
    
     %split the merged epi file into individual scans    
     epi_split(subjectdir, [filename '.nii'], scans_subj, prefix, fsldir, Ntime); %the splited scan has the filename [scan '_reg_sm_fil.nii.gz']; 
