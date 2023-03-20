@@ -4,7 +4,7 @@ function epi_split(subjectdir, filename, scans_subj, prefix, fsldir, Ntime)
 cd(subjectdir);
 system('pwd');
 
-for scan_num=1:length(scans_subj)
+parfor scan_num=1:length(scans_subj)
     cmd = [fsldir 'fslroi ' filename ' ' char(scans_subj(scan_num)) ...
         prefix ' ' num2str(Ntime * (scan_num - 1)) ' ' num2str(Ntime)];
     disp(cmd);
